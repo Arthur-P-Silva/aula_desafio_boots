@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portal de eventos senai</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon"
+        href="https://i0.wp.com/desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png?fit=1200%2C1200&ssl=1&w=640"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/art.css'>
+</head>
+
+<body>
+
+    <header id="app-header" class="navbar navbar-dark bg-dark fixed-top shadow-sm px-3">
+        <span class="navbar-brand mb-0 h5 d-flex align-items-center">
+            Eventos do Senai
+        </span>
+        <div class="photo_profile d-flex align-items-center justify-content-center bg-white rounded-circle">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/SENAI_S%C3%A3o_Paulo_logo.png" alt="avatar"
+                class="img-fluid">
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+
+            <aside class="col-12 col-md-3 col-lg-2 sidebar text-white p-3 bg-danger mt-5">
+                <nav class="nav flex-md-column flex-row nav-pills gap-2">
+                    <a class="nav-link text-white bg-transparent" href="#inicio">Início</a>
+                    <a class="nav-link text-white bg-transparent" href="#eventos">Eventos</a>
+                    <a class="nav-link text-white bg-transparent" href="#sobre">Sobre nós</a>
+                    <a class="nav-link text-white bg-transparent" href="#contato">Contatos</a>
+                </nav>
+            </aside>
+
+            <section id="inicio" class="col-12 col-md-9 col-lg-10 pt-3 pb-5 mt-3">
+
+                <div class="card-body mb-4">
+                    <div class="data text-start mt-5">
+                        <h2 class="h4 mb-1 fw-semibold">Bem-vindo ao portal de eventos do Senai</h2>
+                        <h3 class="h6 text-muted fw-normal">A escola da indústria preparada para proporcionar
+                            entretenimento através do conhecimento!</h3>
+                    </div>
+                </div>
+
+                <!-- Carrossel de fotos -->
+                <div id="carouselExampleIndicators" class="carousel slide mb-4 shadow-sm" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="https://static.portaldaindustria.com.br/media/anuga.jpeg" class="d-block w-100"
+                                alt="Evento 1">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://senaies.com.br/wp-content/uploads/2018/08/Desvendar40-590x430.jpeg"
+                                class="d-block w-100" alt="Evento 2">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://arquivos.sfiec.org.br/sfiec/files/images/mundo%20senai(1).jpeg"
+                                class="d-block w-100" alt="Evento 3">
+
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <section id="eventos" class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="h5 fw-semibold mb-3 text-start">Eventos</h3>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="cards-eventos">
+                        </div>
+                    </div>
+                </section>
+                <section id="product-details-wrapper" class="card shadow-lg position-relative mb-4 d-none">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                        <h3 class="h5 fw-semibold m-0 text-start">Detalhes do evento</h3>
+                        <button id="close-btn" title="Fechar Detalhes" class="btn btn-light fw-bold fs-5 lh-1">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="product-details-content" class="card-body">
+                    </div>
+                </section>
+                <!-- SOBRE NÓS -->
+                <section id="sobre" class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="h5 fw-semibold mb-3 text-start text-danger">Sobre nós</h3>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="cards-sobre">
+                            <!-- Card 1 -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-danger">Nossa Missão</h5>
+                                        <p class="card-text">Promover a educação profissional e a inovação industrial,
+                                            formando profissionais qualificados e impulsionando o desenvolvimento do
+                                            país.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-danger">Nossos Valores</h5>
+                                        <p class="card-text">Inovação, ética, sustentabilidade e compromisso com o
+                                            futuro da indústria e da sociedade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-danger">Nossa História</h5>
+                                        <p class="card-text">Com décadas de atuação, o SENAI se consolidou como
+                                            referência em tecnologia e formação profissional em todo o Brasil.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CONTATO -->
+                <section id="contato" class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="h5 fw-semibold mb-3 text-start text-danger">Contato</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form id="form-contato" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome:</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail:</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem:</label>
+                                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-danger w-100">Enviar</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <div>
+                                    <h5 class="fw-semibold text-danger">Endereço</h5>
+                                    <p>Rua da Indústria, 1000 - Campinas/SP<br>
+                                        Telefone: (19) 3333-4444<br>
+                                        E-mail: contato@senai.com.br</p>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.923819398828!2d-47.07778068503457!3d-22.9259056849922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf51e8fa72c9%3A0x8ec9d86bff4cddc2!2sSENAI!5e0!3m2!1spt-BR!2sbr!4v1687564825674!5m2!1spt-BR!2sbr"
+                                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../js/art.js"></script>
+</body>
+
+</html>

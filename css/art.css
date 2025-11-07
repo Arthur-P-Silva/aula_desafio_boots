@@ -1,0 +1,42 @@
+html, body{
+    height: 100%;
+}
+ 
+/* Estilos do avatar original */
+.photo_profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+ 
+.photo_profile:hover{
+    border: #edededbc 3px solid;
+    transition: 0.3s;
+}
+ 
+/* Estilo customizado para os cards de produto (efeito hover) */
+.product-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+header.navbar {
+  background: linear-gradient(90deg, #000 0%, #222 100%);
+  border-bottom: 2px solid #00ccff;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #000000;
+  border: 1px solid #000000;
+}
+
+.carousel-item img{
+    width: 1200px;
+    height: 500px;
+}
