@@ -1,6 +1,10 @@
 html, body{
     height: 100%;
 }
+
+#app-header .navbar-brand {
+    font-size: 0.9rem;
+}
  
 /* Estilos do avatar original */
 .photo_profile{
